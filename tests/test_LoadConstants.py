@@ -1,5 +1,5 @@
 import unittest
-from tools import LoadConstants
+from rule_based_biaspectives_disambiguation.tools import LoadConstants
 
 
 class TestLoadConstants(unittest.TestCase):

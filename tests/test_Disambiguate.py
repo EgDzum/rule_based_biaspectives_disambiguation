@@ -1,5 +1,5 @@
 import unittest
-from tools import Disambiguate
+from rule_based_biaspectives_disambiguation.tools import Disambiguate
 import pymorphy3
 
 
