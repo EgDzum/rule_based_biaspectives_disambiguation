@@ -87,10 +87,10 @@ class Disambiguate:
         return {t: inx for inx, t in enumerate(premarked)}
 
     def findall_needed(self, premarked):
-        needed = {'VERB', 'INFV', 'PRTF', 'GRND',
+        needed = {'VERB', 'INFN', 'PRTF', 'GRND', 'NOUN',
                   'ADVB ', 'PRCL', 'NUMB', 'NUMR', 'PNCT'} # число слово
         return tuple((t, inx) for inx, t in enumerate(premarked) if
-                     t.tag[:4] in needed or t.word == 'за')
+                     str(t.tag)[:4] in needed or t.word == 'за')
 
     def biaspective(self, tokens_needed):
         return next(((t, inx) for t, inx in tokens_needed
